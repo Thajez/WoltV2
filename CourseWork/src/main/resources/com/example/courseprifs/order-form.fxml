@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.courseprifs.fxControllers.FoodOrderForm">
+   <children>
+      <ComboBox fx:id="clientInput" layoutX="44.0" layoutY="26.0" prefWidth="150.0" promptText="Client" />
+      <TextField fx:id="totalPriceField" editable="false" layoutX="325.0" layoutY="316.0" prefWidth="150.0" promptText="Total price" />
+      <ComboBox fx:id="restaurantInput" layoutX="44.0" layoutY="100.0" onAction="#loadMenu" prefWidth="150.0" promptText="Restaurant" />
+      <ComboBox fx:id="cuisineInput" layoutX="44.0" layoutY="141.0" onAction="#loadCuisine" prefWidth="150.0" promptText="Cuisine" />
+      <Spinner fx:id="quantityInput" layoutX="44.0" layoutY="216.0" prefWidth="150.0" promptText="Quantity" />
+      <TextField fx:id="cuisinePriceField" editable="false" layoutX="44.0" layoutY="178.0" prefWidth="150.0" promptText="Cuisine price" />
+      <Button fx:id="addCuisineButton" layoutX="69.0" layoutY="253.0" mnemonicParsing="false" onAction="#addCuisine" prefWidth="100.0" text="Add cuisine" />
+      <Button fx:id="removeCuisineButton" layoutX="69.0" layoutY="290.0" mnemonicParsing="false" onAction="#removeCuisine" prefWidth="100.0" text="Remove cuisine" />
+      <TableView fx:id="orderItemsTable" layoutX="235.0" layoutY="26.0" prefHeight="283.0" prefWidth="330.0">
+         <columns>
+            <TableColumn fx:id="cuisineCol" prefWidth="156.67921447753906" text="Cuisine" />
+            <TableColumn fx:id="quantityCol" prefWidth="79.6981201171875" text="Quantity" />
+            <TableColumn fx:id="priceCol" prefWidth="88.75473022460938" text="Price" />
+         </columns>
+      </TableView>
+      <Button fx:id="createOrderButton" layoutX="259.0" layoutY="360.0" mnemonicParsing="false" onAction="#createOrder" text="Create order" />
+      <Button fx:id="updateOrderButton" layoutX="257.0" layoutY="360.0" mnemonicParsing="false" onAction="#updateOrder" text="Update order" />
+      <ComboBox fx:id="driverInput" layoutX="44.0" layoutY="63.0" prefWidth="150.0" promptText="Driver" />
+   </children>
+</AnchorPane>

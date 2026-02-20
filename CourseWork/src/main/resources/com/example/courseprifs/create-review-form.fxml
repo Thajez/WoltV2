@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="300.0" prefWidth="266.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.courseprifs.fxControllers.CreateReviewForm">
+   <children>
+       <Label layoutX="25.0" layoutY="12.0" text="Review for:" />
+       <TextField fx:id="targetField" editable="false" layoutX="24.0" layoutY="29.0" prefHeight="25.0" prefWidth="218.0" />
+       <Slider fx:id="ratingInput" layoutX="24.0" layoutY="80.0" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="1" prefHeight="34.0" prefWidth="218.0" showTickLabels="true" snapToTicks="true" value="1.0" />
+       <Label layoutX="25.0" layoutY="60.0" text="Rating" />
+       <TextArea fx:id="descriptionInput" layoutX="24.0" layoutY="150.0" prefHeight="101.0" prefWidth="218.0" />
+       <Label layoutX="25.0" layoutY="131.0" text="Description" />
+       <Button fx:id="createButton" layoutX="87.0" layoutY="260.0" mnemonicParsing="false" onAction="#createReview" text="Create review" />
+       <Button fx:id="updateButton" layoutX="84.0" layoutY="260.0" mnemonicParsing="false" onAction="#updateReview" text="Update review" />
+   </children>
+</AnchorPane>

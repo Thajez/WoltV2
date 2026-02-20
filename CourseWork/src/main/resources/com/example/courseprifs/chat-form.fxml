@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+
+<BorderPane prefHeight="365.0" prefWidth="382.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.courseprifs.fxControllers.ChatForm">
+      <top>
+         <Label text="Chat" style="-fx-font-size: 18; -fx-font-weight: bold;" BorderPane.alignment="CENTER"/>
+      </top>
+
+      <center>
+         <ScrollPane fx:id="scrollPane" fitToWidth="true" hbarPolicy="NEVER">
+            <VBox fx:id="messageContainer" spacing="10">
+               <padding>
+                  <Insets top="10" right="10" bottom="10" left="10"/>
+               </padding>
+            </VBox>
+         </ScrollPane>
+      </center>
+
+      <bottom>
+         <VBox spacing="5">
+            <padding>
+               <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <TextArea fx:id="messageBody" promptText="Type your message..." wrapText="true" prefRowCount="3"/>
+            <HBox spacing="10" alignment="CENTER_RIGHT">
+               <Button fx:id="editButton" text="Edit" visible="false" onAction="#editMessage"/>
+               <Button fx:id="deleteButton" text="Delete" visible="false" onAction="#deleteMessage"/>
+               <Button fx:id="sendButton" text="Send" onAction="#sendMessage"/>
+            </HBox>
+         </VBox>
+      </bottom>
+</BorderPane>
