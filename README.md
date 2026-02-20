@@ -1,4 +1,4 @@
-#Fullstack Wolt-like application
+## Fullstack Wolt-like application
 
 Architecture:
 - Backend: Spring Boot + JPA + MySql (XAMPP)
