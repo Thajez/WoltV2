@@ -6,6 +6,8 @@ Architecture:
 - Android: RESTful API from Backend
 - Encryption: BCrypt for Password hashing
 
+![sys architecture](image.png "System architecture")
+
 Features:
 - User management
 - Order management
